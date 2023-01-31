@@ -1,108 +1,149 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Word Guesser** 
 
-Welcome USER_NAME,
+![Am I Responsive](docs/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+ **Visit [Word Guesser](https://stojj2.github.io/Portfolio-Project-1/)**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## **Purpose** 
+Word Guesser is a word game that makes the user learn new things in different categories. The game will be a fun and competitive way to learn new things.
 
-## Gitpod Reminders
+## **User Stories** 
+- As a visiting user, I would like to have a learing game.
+- As a visiting user, I want the game to have a high score system that will encurrage me to get better. 
+- As a visiting user, I would like to have hints that will help me along the game.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Features** 
 
-`python3 -m http.server`
+- ### Game Area 
+  ![Game area]
+  - Game area that is easy to understand.
+  - In the game area there is boxes that will be the length of the word to guess on.
 
-A blue button should appear to click: _Make Public_,
+- ### Result page
+  ![Result page]
+  - A result page will apear when the game is finished and present the scoore.
 
-Another blue button should appear to click: _Open Browser_.
+- ### Responsive Design 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  **phone** 
 
-A blue button should appear to click: _Make Public_,
+  ![Responsive design phone]
 
-Another blue button should appear to click: _Open Browser_.
+  **Tablet** 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  ![Responsive design Ipad]
+  - The website with the game on is designed to be easy to play on a smaller screen size
+## **Future Features** 
+- Adding more word categories to the game.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## **Fonts and color** 
+ - Color - C3B895, 143051, 425F6B
+ - Font - Space Grotesk
 
-------
 
-## Release History
+- The font for the entire webpage is [Orbitron](https://fonts.google.com/specimen/Orbitron)
+## **Wireframe** 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - **Homepage**  
+    ![Homepage Wireframe](docs/erth-to-mars_small.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## **Testing** 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### **Code validation**
+- W3C HTML Validator 
+  
+- W3C CSS Validator 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Lighthouse desktop 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Lighthouse mobile 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### **Test cases** 
+<br><br>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - **`As a visiting user, I would like to have a learing game`** 
+    - Navigation Bar
+      - Testing navigation bar buttons, mouse over function and that they are easy to navigate with. Navigation bar will always be visible all the time and this makes it realy easy to always find the navigation bar on the screen
+      ![index.html mobile](docs/navbar-follow.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+      <br><br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  - **`As a visiting user, I want the game to have a high score system that will encurrage me to get better`**
+    - Test responsiveness on small screen 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+      - Smalest resolution tested is 320x568 
+      ![iphone 5](docs/iphone5.png)
+      <br><br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+  - **`As a visiting user, I would like to have hints that will help me along the game`**
+    - Sign Up
+      - Testing that the Sign Up form will navigate to the confirmation.html after all information is filled in correct and the Launch button is pressed
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - **Testing the website on Apple's Safari browser** 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
+### Fixed bugs 
+ 
+### Unfixed bugs 
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Technology 
+  - **Balsamiq**
+    - Balsamiq Wireframes where used to draw wireframes for this project
+  - **GitPod**
+    - GitPod where used for writing all code 
+  - **GitHub**
+    - For storing the code GitHub where used
+  - **GitHub Pages**
+    - GitHub pages where used for hosting the website
+  - **Chrome DevTools**
+    - Google chrom built in devtools where used for testing 
+  - **Mobile FIRST**
+    - Mobile First Chrome extension where used for screenshots
 
-**How will this affect me?**
+## Supported screens and browsers
+  - For this web page different screen sizes were tested and no errors were found. This specific sizes were validated
+    - **Desktop** 1920×1080
+      - For this resolution the media query will style the website with new style
+    - **Tablet** 768x1024
+    - **Mobile** 360x640
+  - Browsers 
+    - Google Chrom
+## **Deployment**
+ ### GitHub Pages
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Master Branch
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display - to indicate the successful deployment.
+The live link can be found here - https://stojj2.github.io/Portfolio-Project-1/index.html
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+ ### GitPod
+  - The site was coded using GitPod. The steps to deploy is as following:
+  - In the GitHub repository, press the green GitPod button for transfer the project to GitPod enviroment
+    - NOTE!
+      - [GitPod webbrowser plugin](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) needs to be installed to your browser to get this button. 
+## **Credit**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  ### Content
+  - Tracy Staedter for her Mars Exploration [article](https://now.northropgrumman.com/mars-exploration-3-problems-science-needs-to-solve-first/)
+  - SpaceX for [information](https://www.spacex.com/human-spaceflight/mars/)
+  - Marca:s Elon Musk [interview](https://www.marca.com/en/lifestyle/us-news/2022/03/19/6236048cca474106568b456d.html)
+  ### Media
+ - Pictures from [Unsplash](https://unsplash.com/) where used on this website
+ - Pictures from [Pexel](https://www.pexels.com/sv-se/) where used on this website
+ - On this website icons from [Fontawesome](https://fontawesome.com/start) where used
+ - Font [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk?query=space&preview.text=Word%20Guesser%20&preview.size=62&preview.text_type=custom) is from Google fonts
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  ### Other
+  - Very Much inspiration came from Code Institutes [Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) project. The HTML code was in great help for implementing the sign-up form in this website
 
-**So….?**
+  - Code Institute student [template](https://github.com/Code-Institute-Org/gitpod-full-template) for Gitpod was used for this project
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - Mentor **Rohit Sharma** helped me alot in this project for pointing my focus in the right direction
+  - Slack forum for support. Cred to *peer-code-review* channel on slack for reviewing and feedback my project
 
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
