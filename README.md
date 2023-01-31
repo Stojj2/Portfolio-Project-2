@@ -43,11 +43,12 @@ Word Guesser is a word game that makes the user learn new things in different ca
  - Font - Space Grotesk
 
 
-- The font for the entire webpage is [Orbitron](https://fonts.google.com/specimen/Orbitron)
+- The font for the entire webpage is [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 ## **Wireframe** 
 
-  - **Homepage**  
-    ![Homepage Wireframe](docs/erth-to-mars_small.png)
+  - **Game site**  
+    <img src="docs/wireframe-desktop.png" alt="desktop wireframe" width="500"/>
+    <img src="docs/wireframe-phone.png" alt="phone wireframe" width="223"/>
 
 ## **Testing** 
 
@@ -55,7 +56,6 @@ Word Guesser is a word game that makes the user learn new things in different ca
 - W3C HTML Validator 
   
 - W3C CSS Validator 
-
 
 - Lighthouse desktop 
 
@@ -137,7 +137,7 @@ The live link can be found here - https://stojj2.github.io/Portfolio-Project-1/i
  - Pictures from [Unsplash](https://unsplash.com/) where used on this website
  - Pictures from [Pexel](https://www.pexels.com/sv-se/) where used on this website
  - On this website icons from [Fontawesome](https://fontawesome.com/start) where used
- - Font [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk?query=space&preview.text=Word%20Guesser%20&preview.size=62&preview.text_type=custom) is from Google fonts
+ - Font [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is from Google fonts
 
   ### Other
   - Very Much inspiration came from Code Institutes [Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) project. The HTML code was in great help for implementing the sign-up form in this website
