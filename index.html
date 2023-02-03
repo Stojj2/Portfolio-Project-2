@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Word-Guesser</title>
+    <title>word-guesser</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div>
             <a href="#home">
-                <h1>Word Guesser</h1>
+                <h1>WORD GUESSER</h1>
             </a>
         </div>
     </header>
 
     <section class="game-area">
-        <div clas="game">
-        </div>
         <div class="category">
+            <h2>Category</h2>
+            <button data-type="select" class="select-planet">Planets</button>
+            <button data-type="select" class="select-cars">Cars</button>
+        </div>
+        <div class="game">
+            <div class="guesses-left">
+                <span id="guesses-field">guesses left</span>
+            </div>
+            <div class="hint">
+                <span id="hint-field">Hint</span>
+            </div>
+            <div class="word">
+                <span id="word-field">word to be guessed</span>
+            </div>
+            <div class="submit">
+                <p>Enter Answer:</p>
+                <input id="answer-box" type="text">
+            </div>
+            <button data-type="submit" class="button-submit">Submit Answer</button>
+
         </div>
     </section>
 
     <section class="instruction-area">
         <div>
+            <h2>Instructions</h2>
+            <ol>
+                <li>Chose word category and boxes will apear that is the lengt of the word that is to guessed</li>
+                <li>Over the word boxex the game will provide a hint for helping you on the way</li>
+                <li>You can choose to get another hint but then you will get a lower score</li>
+            </ol>
         </div>
     </section>
 
@@ -32,4 +62,5 @@
     </footer>
 
 </body>
+
 </html>
