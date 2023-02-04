@@ -102,7 +102,7 @@ let planets = [
     }
 ]
 
-let guessCount = 3;
+let guessCount = 0;
 let gameWord = "";
 
 let buttons = document.getElementsByTagName("button");
@@ -183,17 +183,16 @@ function selectCarObject() {
 function checkAnswer() {
     let guessedWord = document.getElementById("answer-box").value;
     console.log(guessedWord);
-    if (guessedWord.toLowerCase() === gameWord.toLowerCase()) {
+    if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord !="") {
         let hint = document.getElementById("hint-field");
         hint.textContent = "You guessed right!";
         let wordToBeGuessed = document.getElementById("word-field");
         wordToBeGuessed.textContent = gameWord;
 
+    } else if (guessCount === 0) {
+        endGame();
     } else {
         decreaseGuessCount();
-    }
-    if (guessCount === 0) {
-        endGame();
     }
     clearInput()
 }
