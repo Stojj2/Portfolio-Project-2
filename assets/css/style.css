@@ -74,12 +74,30 @@ header>div>a {
     width: 85%;
 }
 
+.game h3 {
+    margin: 0px;
+}
+
 .hint {
     height: 110px;
+}
+.word {
+    font-size: 35px;
 }
 
 .submit {
     margin: 5px;
+}
+
+.submit input {
+    opacity: 70%;
+    height: 40px;
+}
+
+.submit button {
+    opacity: 70%;
+    height: 40px;
+    margin-top: 10px;
 }
 
 .guesses-left {
