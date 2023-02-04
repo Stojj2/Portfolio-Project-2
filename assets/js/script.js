@@ -16,13 +16,52 @@ document.getElementById("answer-box").addEventListener("keydown", function (even
 })
 
 
+let guessCount = 3;
 
-
-
-let guessCount = 8;
-let cars = [{
+let cars = [
+    {
         'fact': "Inventor of the seatbelt",
         "word": "volvo"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
+    },
+
+    {
+        'fact': "The company is located in Germany",
+        "word": "bmw"
     },
 
     {
@@ -31,10 +70,50 @@ let cars = [{
     }
 ]
 
-
-let planets = [{
+let planets = [
+    {
         'fact': "This planet is the biggest in our solar system",
         "word": "jupiter"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
+    },
+
+    {
+        'fact': "This planet is counted as a dworf planet",
+        "word": "pluto"
     },
 
     {
@@ -44,29 +123,55 @@ let planets = [{
 ]
 
 
-
-
 /**
  * The main game "loop", called when the script is first loaded
  * and after the user's answer has been processed
  */
-
 function startGame(category) {
-    getWord(category)
+    let guesses = document.getElementById("guesses-field");
+    guesses.textContent = guessCount;
+    let word = getWord(category);
+
+    let hint = document.getElementById("hint-field");
+    hint.textContent = word.fact;
+
+    wordToBeGuessed = document.getElementById("word-field");
+    wordLenght = word.word.length;
+
+    wordToBeGuessed.textContent = word.word
 
 }
 
 function getWord(choosen) {
-    for (chosen in choos) {
-        console.log(choos);
+    if (choosen === "planets") {
+        return selectPlanetObject();
+    } else if (choosen === "cars") {
+        return selectCarObject();
     }
-
 }
+
+function selectPlanetObject() {
+    return planets[randomIndex()];
+}
+
+function selectCarObject() {
+    return cars[randomIndex()];
+}
+
 
 function checkAnswer() {
 
 }
 
 function decreaseGuessCount() {
+    guessCount --
+    let guesses = document.getElementById("guesses-field");
+    guesses.textContent = guessCount;
 
+
+}
+
+function randomIndex() {
+    let index = Math.floor(Math.random() * 10);
+    return index;
 }
