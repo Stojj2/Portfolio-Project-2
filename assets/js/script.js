@@ -1,23 +1,3 @@
-let buttons = document.getElementsByTagName("button");
-
-for (let button of buttons) {
-    button.addEventListener("click", function () {
-        if (this.getAttribute("data-type") === "planets") {
-            startGame("planets")
-        } else if (this.getAttribute("data-type") === "cars") {
-            startGame("cars")
-        }
-    });
-}
-document.getElementById("answer-box").addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        checkAnswer();
-    }
-})
-
-
-let guessCount = 3;
-
 let cars = [
     {
         'fact': "Inventor of the seatbelt",
@@ -30,43 +10,43 @@ let cars = [
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "Owned by the same family since 1899",
+        "word": "fiat"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': 'In Latin means this car maker means "Listen"',
+        "word": "audi"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "The name of an inventor",
+        "word": "tesla"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "The founder of this company has the brand name in his last name",
+        "word": "ford"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': " One of Indias biggest company",
+        "word": "tata"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "This company actually started out as a textiles business",
+        "word": "toyota"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "Swedish company that went bankrupt in 2011",
+        "word": "saab"
     },
 
     {
-        'fact': "The company is located in Germany",
-        "word": "bmw"
+        'fact': "The first diesel automobile",
+        "word": "mercedes"
     }
 ]
 
@@ -77,71 +57,104 @@ let planets = [
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
+        'fact': "This planet is far away and counted as a dworf planet",
         "word": "pluto"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Closest planet to The Sun",
+        "word": "mercury"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "1 day on this planet is almost 1 Earth year",
+        "word": "venus"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Surface is mainly water",
+        "word": "earth"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Known as the Red Planet",
+        "word": "mars"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Final planet in the Solar System",
+        "word": "neptune"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Was classified as a planet for half a century",
+        "word": "ceres"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "Adorned with thousands of beautiful ringlets",
+        "word": "saturn"
     },
 
     {
-        'fact': "This planet is counted as a dworf planet",
-        "word": "pluto"
+        'fact': "The coldest planet in the Solar System",
+        "word": "uranus"
     }
 ]
 
+let guessCount = 3;
+let gameWord = "";
+
+let buttons = document.getElementsByTagName("button");
+
+for (let button of buttons) {
+    button.addEventListener("click", function () {
+        if (this.getAttribute("data-type") === "planets") {
+            startGame("planets")
+        } else if (this.getAttribute("data-type") === "cars") {
+            startGame("cars")
+        } else if (this.getAttribute("data-type") === "submit") {
+            checkAnswer();
+        }
+    });
+}
 
 /**
- * The main game "loop", called when the script is first loaded
- * and after the user's answer has been processed
+ * The start game function prepare the game area with game data.
+ */
+document.getElementById("answer-box").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        checkAnswer();
+    }
+})
+
+/**
+ * The start game function prepare the game area with game data.
  */
 function startGame(category) {
+    guessCount = 3;
     let guesses = document.getElementById("guesses-field");
     guesses.textContent = guessCount;
     let word = getWord(category);
-
+    
     let hint = document.getElementById("hint-field");
     hint.textContent = word.fact;
-
-    wordToBeGuessed = document.getElementById("word-field");
+    let wordToBeGuessed = document.getElementById("word-field");
+    
     wordLenght = word.word.length;
+    let lenght = "";
 
-    wordToBeGuessed.textContent = word.word
-
+    for (let i = 0; i < wordLenght; i++) {
+        lenght += "_ ";
+    }
+    gameWord = word.word;
+    wordToBeGuessed.textContent = lenght;
 }
 
+/**
+ * Checks which button where pressed 
+ * and get a random object from cars or planets array
+ */
 function getWord(choosen) {
     if (choosen === "planets") {
         return selectPlanetObject();
@@ -150,28 +163,60 @@ function getWord(choosen) {
     }
 }
 
+/**
+ * Selects a random object from planets array
+ */
 function selectPlanetObject() {
     return planets[randomIndex()];
 }
 
+/**
+ * Selects a random object from car array 
+ */
 function selectCarObject() {
     return cars[randomIndex()];
 }
 
-
+/**
+ * Check if the answer typed in is right or wrong
+ */
 function checkAnswer() {
-
+    let guessedWord = document.getElementById("answer-box").value;
+    console.log(guessedWord);
+    if (guessedWord.toLowerCase() === gameWord.toLowerCase()) {
+        console.log("Congrats you guessed right!");
+    } else {
+        decreaseGuessCount();
+    }
+    if (guessCount === 0) {
+        endGame();
+    }
 }
 
+/**
+ * Decrease the value of guesses left by 1
+ */
 function decreaseGuessCount() {
     guessCount --
     let guesses = document.getElementById("guesses-field");
     guesses.textContent = guessCount;
-
-
 }
 
+/**
+ * Generates a random number and returns the value
+ */
 function randomIndex() {
     let index = Math.floor(Math.random() * 10);
     return index;
+}
+
+function endGame() {
+    let guesses = document.getElementById("guesses-field");
+    guesses.textContent = 0;
+    let hint = document.getElementById("hint-field");
+    hint.textContent = "GAME OVER!";
+    let wordToBeGuessed = document.getElementById("word-field");
+    wordToBeGuessed.textContent = gameWord;
+
+    console.log("Game Over");
 }
