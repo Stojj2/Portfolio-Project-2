@@ -184,13 +184,18 @@ function checkAnswer() {
     let guessedWord = document.getElementById("answer-box").value;
     console.log(guessedWord);
     if (guessedWord.toLowerCase() === gameWord.toLowerCase()) {
-        console.log("Congrats you guessed right!");
+        let hint = document.getElementById("hint-field");
+        hint.textContent = "You guessed right!";
+        let wordToBeGuessed = document.getElementById("word-field");
+        wordToBeGuessed.textContent = gameWord;
+
     } else {
         decreaseGuessCount();
     }
     if (guessCount === 0) {
         endGame();
     }
+    clearInput()
 }
 
 /**
@@ -217,6 +222,9 @@ function endGame() {
     hint.textContent = "GAME OVER!";
     let wordToBeGuessed = document.getElementById("word-field");
     wordToBeGuessed.textContent = gameWord;
+    
+}
 
-    console.log("Game Over");
+function clearInput() {
+    document.getElementById("answer-box").value = "";
 }
