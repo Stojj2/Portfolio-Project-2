@@ -25,8 +25,8 @@
     <section class="game-area">
         <div class="category">
             <h2>Category</h2>
-            <button data-type="select" class="select-planet">Planets</button>
-            <button data-type="select" class="select-cars">Cars</button>
+            <button data-type="planets" class="select-planet">Planets</button>
+            <button data-type="cars" class="select-cars">Cars</button>
         </div>
         <div class="game">
 
@@ -41,7 +41,7 @@
             </div>
 
             <div class="word">
-                <span id="word-field">word to be guessed</span>
+                <span id="word-field">Choose a category!</span>
             </div>
 
             <div class="submit">
@@ -49,7 +49,7 @@
                 <input id="answer-box" type="text">
             </div>
 
-            <button data-type="submit" class="button-submit">Submit Answer</button>
+            <button data-type="submit" id="button-submit">Submit Answer</button>
 
         </div>
     </section>
@@ -68,6 +68,7 @@
     <footer>
     </footer>
 
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
