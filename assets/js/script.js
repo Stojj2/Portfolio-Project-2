@@ -12,7 +12,7 @@ function setup() {
     document.getElementById("button-submit").disabled = true;
     document.getElementById("word-field").style.backgroundColor = "#ffffff9e";
     document.getElementById("hint-header").textContent = "WELCOME!";
-    
+
     let buttons = document.getElementsByTagName("button");
     document.getElementById("answer-box").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -47,19 +47,19 @@ function startGame(category) {
     let guesses = document.getElementById("guesses-field");
     guesses.textContent = guessCount;
     let word = getWord(category);
-    
+
     let hint = document.getElementById("hint-field");
     hint.textContent = word.fact;
     let wordToBeGuessed = document.getElementById("word-field");
-    
+
     wordLenght = word.word.length;
-    let lenght = "";
+    let hiddenWord = "";
 
     for (let i = 0; i < wordLenght; i++) {
-        lenght += "_ ";
+        hiddenWord += "_ ";
     }
     gameWord = word.word;
-    wordToBeGuessed.textContent = lenght;
+    wordToBeGuessed.textContent = hiddenWord;
 }
 
 /**
@@ -94,7 +94,7 @@ function selectCarObject() {
 function checkAnswer() {
     let guessedWord = document.getElementById("answer-box").value;
     console.log(guessedWord);
-    if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord !="") {
+    if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord != "") {
         let hint = document.getElementById("hint-field");
 
         document.getElementById("hint-header").textContent = "CONGRATULATION!";
@@ -105,7 +105,7 @@ function checkAnswer() {
         let wordToBeGuessed = document.getElementById("word-field");
         wordToBeGuessed.textContent = gameWord;
 
-    }  else {
+    } else {
         document.getElementById("guesses-field").style.backgroundColor = "#c52f2f94";
         decreaseGuessCount();
     }
@@ -120,7 +120,7 @@ function checkAnswer() {
  * Decrease the value of guesses left by 1
  */
 function decreaseGuessCount() {
-    guessCount --
+    guessCount--
     let guesses = document.getElementById("guesses-field");
     guesses.textContent = guessCount;
 }
@@ -143,7 +143,7 @@ function endGame() {
     hint.textContent = "GAME OVER!";
     let wordToBeGuessed = document.getElementById("word-field");
     wordToBeGuessed.textContent = gameWord;
-    
+
 }
 
 function clearInput() {
