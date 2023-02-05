@@ -31,17 +31,16 @@
         <div class="game">
 
             <div class="guesses-left">
-                <h3>Guesses left</h3>
+                <h3>Guesses left:</h3>
                 <span id="guesses-field">0</span>
             </div>
 
             <div class="hint">
-                <h3>Hint</h3>
-                <span id="hint-field">Hint</span>
-            </div>
-
-            <div class="word">
-                <span id="word-field">Choose a category!</span>
+                <h3 id="hint-header">Hint:</h3>
+                <span id="hint-field"></span>
+                <div class="word">
+                    <span id="word-field">Choose a category!</span>
+                </div>
             </div>
 
             <div class="submit">
@@ -57,9 +56,11 @@
         <div>
             <h2>Instructions</h2>
             <ol>
-                <li>Choose word category and boxes will appear that is the length of the word that is to guessed</li>
-                <li>Over the word boxes the game will provide a hint for helping you on the way</li>
-                <li>You can choose to get another hint, but then you get a deduction from the total points</li>
+                <li>Select word category and the game will start</li>
+                <li>You will get a hint to help you guess the correct word</li>
+                <li>You have 3 attempts to guess the correct word, when you have no guesses
+                    left, the game will end</li>
+                <li>Select word category again and guess another word</li>
             </ol>
         </div>
     </section>

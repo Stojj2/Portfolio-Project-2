@@ -78,6 +78,9 @@ header>div>a {
     align-items: center;
     background-color: #425F6B;
     width: 85%;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 20px;
 }
 
 .game h3 {
@@ -85,10 +88,18 @@ header>div>a {
 }
 
 .hint {
-    height: 110px;
+    height: auto;
 }
 .word {
-    font-size: 35px;
+    display: flex;
+    font-size: 24px;
+    width: 100%;
+    justify-content: center;
+}
+
+#word-field {
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .submit {
@@ -107,11 +118,18 @@ header>div>a {
 }
 
 .guesses-left {
-    margin-top: 40px;
+    display: flex;
+    margin-top: 20px;
 }
+
+#guesses-field {
+    display: flex;
+    flex-direction: row;
+}
+
 /*This styles the instruction area of the page*/
 .instruction-area {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: #C3B895;
 }
