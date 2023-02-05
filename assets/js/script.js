@@ -10,7 +10,6 @@ let gameWord = "";
 function setup() {
     document.getElementById("answer-box").disabled = true;
     document.getElementById("button-submit").disabled = true;
-    document.getElementById("word-field").style.backgroundColor = "#ffffff9e";
     document.getElementById("hint-header").textContent = "WELCOME!";
 
     let buttons = document.getElementsByTagName("button");
