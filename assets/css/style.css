@@ -6,6 +6,7 @@ body {
     margin: 0px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
+    background-color: #143051;
 }
 
 /*This styles the header of the page*/
@@ -67,12 +68,11 @@ header>div>a {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: #143051;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 10px;
 }
 
@@ -132,9 +132,11 @@ header>div>a {
 
 /*This styles the instruction area of the page*/
 .instruction-area {
-    width: 100%;
-    height: 400px;
+    width: 89%;
+    height: auto;
     background-color: #C3B895;
+    border-radius: 5px;
+    margin-bottom: 50px;
 }
 
 .instruction-area h2 {
@@ -145,18 +147,61 @@ header>div>a {
 }
 
 .instruction-area ol {
-    margin: 10px;
+    margin: 25px 5px 40px -5px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+}
+
+
+/* Footer section */
+
+footer {
+    justify-content: space-around;
+    text-align: center;
+    background-color: #fffffff2;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 85%;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 30px;
+}
+
+.social-media a {
+    color: #000000cc;
 }
 
 
 /* for big screen sizes from 900px wide and up */
 @media screen and (min-width: 900px) {
-    body {
-        width: 70%;
-        align-self: center;
+    .game {
+        height: 500px;
+        gap: 50px;
     }
+
+    .game > div {
+        width: 50%;
+        height: 33%;
+    }
+    
+    .category {
+        width: 50%;
+    }
+
+    .instruction-area ol {
+        gap: 20px;
+    }
+
+    
 }
