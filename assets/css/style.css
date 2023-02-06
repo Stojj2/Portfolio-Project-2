@@ -50,6 +50,8 @@ header>div>a {
     opacity: 50%;
     border-radius: 10px;
 }
+
+
 /*This styles the Game area of the page*/
 .game-area {
     display: flex;
@@ -73,6 +75,7 @@ header>div>a {
     justify-content: flex-start;
     margin: 10px;
 }
+
 .game>div {
     display: flex;
     padding: 5px;
@@ -93,6 +96,7 @@ header>div>a {
 .hint {
     height: auto;
 }
+
 .word {
     display: flex;
     font-size: 24px;
@@ -146,4 +150,13 @@ header>div>a {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+}
+
+
+/* for big screen sizes from 900px wide and up */
+@media screen and (min-width: 900px) {
+    body {
+        width: 70%;
+        align-self: center;
+    }
 }

@@ -17,14 +17,14 @@ function setup() {
         if (event.key === "Enter") {
             checkAnswer();
         }
-    })
+    });
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "planets") {
-                startGame("planets")
+                startGame("planets");
             } else if (this.getAttribute("data-type") === "cars") {
-                startGame("cars")
+                startGame("cars");
             } else if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             }
@@ -51,7 +51,7 @@ function startGame(category) {
     hint.textContent = word.fact;
     let wordToBeGuessed = document.getElementById("word-field");
 
-    wordLenght = word.word.length;
+    let wordLenght = word.word.length;
     let hiddenWord = "";
 
     for (let i = 0; i < wordLenght; i++) {
@@ -112,14 +112,14 @@ function checkAnswer() {
     if (guessCount === 0) {
         endGame();
     }
-    clearInput()
+    clearInput();
 }
 
 /**
  * Decrease the value of guesses left by 1
  */
 function decreaseGuessCount() {
-    guessCount--
+    guessCount--;
     let guesses = document.getElementById("guesses-field");
     guesses.textContent = guessCount;
 }

@@ -48,7 +48,7 @@ const CARS = [
         'fact': "The first diesel automobile",
         "word": "mercedes"
     }
-]
+];
 
 const PLANETS = [
     {
@@ -100,4 +100,4 @@ const PLANETS = [
         'fact': "The coldest planet in the Solar System",
         "word": "uranus"
     }
-]
+];

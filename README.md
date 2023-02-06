@@ -1,16 +1,16 @@
 # **Word Guesser** 
 
-![Am I Responsive](docs/)
+![Am I Responsive](docs/responsive-design.png)
 
- **Visit [Word Guesser](https://stojj2.github.io/Portfolio-Project-1/)**
+ **Visit [Word Guesser](https://stojj2.github.io/Portfolio-Project-2/)**
 
 ## **Purpose** 
-Word Guesser is a word game that makes the user learn new things in different categories. The game will be a fun and competitive way to learn new things.
+Word Guesser is a word game that makes the user learn new things in different categories. This game is a fun and competitive way to learn new things.
 
 ## **User Stories** 
-- As a visiting user, I would like to have a learing game.
-- As a visiting user, I want the game to have a high score system that will encurrage me to get better. 
-- As a visiting user, I would like to have hints that will help me along the game.
+- As a visiting user, I would like to play a word game.
+- As a visiting user, I want to be encouraged to learn something new. 
+- As a visiting user, I would like to have instructions on how to use the game.
 
 ## **Features** 
 
@@ -19,7 +19,7 @@ Word Guesser is a word game that makes the user learn new things in different ca
   - Game area that is easy to understand.
   - In the game area there is boxes that will be the length of the word to guess on.
 
-- ### Result page
+- ### Hint
   ![Result page]
   - A result page will apear when the game is finished and present the scoore.
 
@@ -65,27 +65,28 @@ Word Guesser is a word game that makes the user learn new things in different ca
 ### **Test cases** 
 <br><br>
 
-  - **`As a visiting user, I would like to have a learing game`** 
-    - Navigation Bar
-      - Testing navigation bar buttons, mouse over function and that they are easy to navigate with. Navigation bar will always be visible all the time and this makes it realy easy to always find the navigation bar on the screen
-      ![index.html mobile](docs/navbar-follow.png)
+  - **`As a visiting user, I would like to play a word game.`** 
+    - i
 
-      <br><br>
-
-  - **`As a visiting user, I want the game to have a high score system that will encurrage me to get better`**
-    - Test responsiveness on small screen 
+  - **`As a visiting user, I want to be encouraged to learn something new.`**
+    -  u
 
       - Smalest resolution tested is 320x568 
       ![iphone 5](docs/iphone5.png)
       <br><br>
 
-  - **`As a visiting user, I would like to have hints that will help me along the game`**
-    - Sign Up
-      - Testing that the Sign Up form will navigate to the confirmation.html after all information is filled in correct and the Launch button is pressed
-
-  - **Testing the website on Apple's Safari browser** 
-
-
+  - **`As a visiting user, I would like to have instructions on how to use the game.`**
+    - 
+    <br><br>
+   **Supported screens and browsers**
+  - For this web page different screen sizes were tested and no errors were found. This specific sizes were validated
+    - **Desktop** 1920×1080
+      - For this resolution the media query will style the website with new style
+    - **Tablet** 768x1024
+    - **Mobile** 360x640
+  - Browsers 
+    - Google Chrom
+    <br><br>
 
 ### Fixed bugs 
  
@@ -106,14 +107,6 @@ Word Guesser is a word game that makes the user learn new things in different ca
   - **Mobile FIRST**
     - Mobile First Chrome extension where used for screenshots
 
-## Supported screens and browsers
-  - For this web page different screen sizes were tested and no errors were found. This specific sizes were validated
-    - **Desktop** 1920×1080
-      - For this resolution the media query will style the website with new style
-    - **Tablet** 768x1024
-    - **Mobile** 360x640
-  - Browsers 
-    - Google Chrom
 ## **Deployment**
  ### GitHub Pages
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
