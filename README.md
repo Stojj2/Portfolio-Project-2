@@ -5,45 +5,55 @@
  **Visit [Word Guesser](https://stojj2.github.io/Portfolio-Project-2/)**
 
 ## **Purpose** 
-Word Guesser is a word game that makes the user learn new things in different categories. This game is a fun and competitive way to learn new things.
+Word Guesser is a word game that aims to make the user learn new things in different subject categories. This game is a fun and competitive way to learn new things.
 
 ## **User Stories** 
-- As a visiting user, I would like to play a word game.
+- As a visiting user, I would like to play something with words.
 - As a visiting user, I want to be encouraged to learn something new. 
 - As a visiting user, I would like to have instructions on how to use the game.
 
 ## **Features** 
 
-- ### Game Area 
-  ![Game area]
-  - Game area that is easy to understand.
-  - In the game area there is boxes that will be the length of the word to guess on.
+- ### Header area 
+  ![Header area](docs/header.png)
+  - Gives a clear title with the name of the game
 
-- ### Hint
-  ![Result page]
-  - A result page will apear when the game is finished and present the scoore.
+- ### Category area 
+  ![Category area](docs/category.png)
+  - Category section with the option to choose between two different word categories
+
+- ### Game Area 
+  ![Game area](docs/game.png)
+  - Game area that is easy to understand.
+  - In the game area there will be boxes for:
+    - Guesses left
+    - Hints
+    - Word length in the form of underscores
+    - Input field for guesses
+    - Submit button for submitting the guess  
+  - The input box and send button will be grayed out when the game is not started or if the game is over.
+  - As soon a category is chosen the game area will be loaded with new content.
+
+- ### Instruction area
+  ![Instruction area](docs/instruction.png)
+  - Instruction area will provide the user with four easy steps how to play the game.
+
+- ### Footer area 
+  ![Footer area](docs/footer.png)
+  - Footer section is the last section of the game site and do provide social media links to the game creator.
+<br><br>
 
 - ### Responsive Design 
+  - The game will be playable on different screens sizes, Phon, tablet and desktop. 
 
-  **phone** 
-
-  ![Responsive design phone]
-
-  **Tablet** 
-
-  ![Responsive design Ipad]
-  - The website with the game on is designed to be easy to play on a smaller screen size
 ## **Future Features** 
 - Adding more word categories to the game.
-
-
 
 ## **Fonts and color** 
  - Color - C3B895, 143051, 425F6B
  - Font - Space Grotesk
+ - The font for the entire webpage is [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 
-
-- The font for the entire webpage is [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 ## **Wireframe** 
 
   - **Game site**  
@@ -61,22 +71,22 @@ Word Guesser is a word game that makes the user learn new things in different ca
 
 - Lighthouse mobile 
 
+- jshint
+
 
 ### **Test cases** 
 <br><br>
 
-  - **`As a visiting user, I would like to play a word game.`** 
-    - i
+  - **`As a visiting user, I would like to play something with words.`** 
+    - The game will have two different categories with words and will randomly chose a word for every game.
 
   - **`As a visiting user, I want to be encouraged to learn something new.`**
-    -  u
-
-      - Smalest resolution tested is 320x568 
-      ![iphone 5](docs/iphone5.png)
+    -  The hint area is intended to give the user help on the way to being able to guess the word. Hints are also a way to teach the user something about the word that helps to remember something about the word until the next time it appears. 
+      ![Hint](docs/hint.png)
       <br><br>
 
   - **`As a visiting user, I would like to have instructions on how to use the game.`**
-    - 
+    - On the bottom of the page instruction is provided in a 4 step how-to-play guide.
     <br><br>
    **Supported screens and browsers**
   - For this web page different screen sizes were tested and no errors were found. This specific sizes were validated
@@ -89,8 +99,12 @@ Word Guesser is a word game that makes the user learn new things in different ca
     <br><br>
 
 ### Fixed bugs 
+ - One bug where found and fixed.
+    - When guesses left is at 0 the game is supposed to end, however the bug did allowed the user to make 1 more guess.
+    This was fixed with rearranging a if statement. The new if statement will check guesses left after it has decresed the guessing count.
  
-### Unfixed bugs 
+### Unfixed bugs
+ - If a user is doing a blank space in the input field when guessing a word the code logic will not be able to handle that today and will se it as the wrong answer eaven if the word guessed is right.
 
 
 ## Technology 
@@ -113,7 +127,7 @@ Word Guesser is a word game that makes the user learn new things in different ca
 - In the GitHub repository, navigate to the Settings tab
 - From the source section drop-down menu, select the Master Branch
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display - to indicate the successful deployment.
-The live link can be found here - https://stojj2.github.io/Portfolio-Project-1/index.html
+The live link can be found here - https://stojj2.github.io/Portfolio-Project-2/index.html
 
  ### GitPod
   - The site was coded using GitPod. The steps to deploy is as following:
@@ -122,13 +136,7 @@ The live link can be found here - https://stojj2.github.io/Portfolio-Project-1/i
       - [GitPod webbrowser plugin](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) needs to be installed to your browser to get this button. 
 ## **Credit**
 
-  ### Content
-  - Tracy Staedter for her Mars Exploration [article](https://now.northropgrumman.com/mars-exploration-3-problems-science-needs-to-solve-first/)
-  - SpaceX for [information](https://www.spacex.com/human-spaceflight/mars/)
-  - Marca:s Elon Musk [interview](https://www.marca.com/en/lifestyle/us-news/2022/03/19/6236048cca474106568b456d.html)
   ### Media
- - Pictures from [Unsplash](https://unsplash.com/) where used on this website
- - Pictures from [Pexel](https://www.pexels.com/sv-se/) where used on this website
  - On this website icons from [Fontawesome](https://fontawesome.com/start) where used
  - Font [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is from Google fonts
 
