@@ -1,7 +1,5 @@
-document.addEventListener("DOMContentLoaded", setup);
 let guessCount = 0;
 let gameWord = "";
-
 
 /**
  * This function will be caled when the DOM content is loaded
@@ -32,6 +30,7 @@ function setup() {
     }
 }
 
+
 /**
  * The start game function prepare the game area with game data.
  */
@@ -51,10 +50,10 @@ function startGame(category) {
     hint.textContent = word.fact;
     let wordToBeGuessed = document.getElementById("word-field");
 
-    let wordLenght = word.word.length;
+    let wordLength = word.word.length;
     let hiddenWord = "";
 
-    for (let i = 0; i < wordLenght; i++) {
+    for (let i = 0; i < wordLength; i++) {
         hiddenWord += "_ ";
     }
     gameWord = word.word;
@@ -74,25 +73,24 @@ function getWord(choosen) {
 }
 
 /**
- * Selects a random object from planets array
+ * Selects a random object from PLANETS array
  */
 function selectPlanetObject() {
     return PLANETS[randomIndex()];
 }
 
 /**
- * Selects a random object from car array 
+ * Selects a random object from CARS array 
  */
 function selectCarObject() {
     return CARS[randomIndex()];
 }
 
 /**
- * Check if the answer typed in is right or wrong
+ * Check if the answer typed in is matching the right answer
  */
 function checkAnswer() {
-    let guessedWord = document.getElementById("answer-box").value;
-    console.log(guessedWord);
+    let guessedWord = document.getElementById("answer-box").value.trim();
     if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord != "") {
         let hint = document.getElementById("hint-field");
 
@@ -132,6 +130,9 @@ function randomIndex() {
     return index;
 }
 
+/**
+ * Ending the game and notifies the player
+ */
 function endGame() {
     document.getElementById("hint-header").textContent = "SORRY!";
     document.getElementById("answer-box").disabled = true;
@@ -145,6 +146,11 @@ function endGame() {
 
 }
 
+/**
+ * Clears the input field from content
+ */
 function clearInput() {
     document.getElementById("answer-box").value = "";
 }
+
+document.addEventListener("DOMContentLoaded", setup);
