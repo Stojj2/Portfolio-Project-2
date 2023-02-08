@@ -18,18 +18,22 @@ function setup() {
     });
 
     for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "planets") {
-                startGame("planets");
-            } else if (this.getAttribute("data-type") === "cars") {
-                startGame("cars");
-            } else if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            }
-        });
+        button.addEventListener("click", buttonClicked);
     }
 }
 
+/**
+ * Checks which button is clicked
+ */
+function buttonClicked(clickEvent) {
+    if (clickEvent.target.getAttribute("data-type") === "planets") {
+        startGame("planets");
+    } else if (clickEvent.target.getAttribute("data-type") === "cars") {
+        startGame("cars");
+    } else if (clickEvent.target.getAttribute("data-type") === "submit") {
+        checkAnswer();
+    }
+}
 
 /**
  * The start game function prepare the game area with game data.
@@ -76,14 +80,14 @@ function getWord(choosen) {
  * Selects a random object from PLANETS array
  */
 function selectPlanetObject() {
-    return PLANETS[randomIndex()];
+    return PLANETS[getRandomIndex()];
 }
 
 /**
  * Selects a random object from CARS array 
  */
 function selectCarObject() {
-    return CARS[randomIndex()];
+    return CARS[getRandomIndex()];
 }
 
 /**
@@ -125,7 +129,7 @@ function decreaseGuessCount() {
 /**
  * Generates a random number and returns the value
  */
-function randomIndex() {
+function getRandomIndex() {
     let index = Math.floor(Math.random() * 10);
     return index;
 }
