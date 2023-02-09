@@ -85,7 +85,8 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
     - Press one category button
     - The game area gets loaded with content
     - Press one more time and the game area loads a different word
-    - **Test Passed** ✓
+
+     **Test Passed** ✓
 <br><br>
   - **`dont allow any input when the game is not started or input field is empty`**
       - The input box and the submit button is greyed out before any game is started
@@ -95,7 +96,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
       <img src="docs/empty-input.png" alt="desktop wireframe" width="300"/>
 
-      - **Test Passed** ✓
+       **Test Passed** ✓
 <br><br>      
   - **`Check the answer to the hidden word`**
     - Start a game
@@ -109,13 +110,13 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
     <img src="docs/wrong-guess.png" alt="desktop wireframe" width="250"/>
 
-    - **Test Passed** ✓
+    **Test Passed** ✓
 <br><br>
   - **`Handling involuntary input such as spaces`**
     - Typing in a correct answer with a blankspace after the word
     - The game logic is trimming the word and remove blanks spaces
 
-    - **Test Passed** ✓
+    **Test Passed** ✓
 <br><br>
   - **`Ends the game when no guesses are left`**
     - Run out of guesses and se if the game ends
@@ -123,7 +124,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
     <img src="docs/end-game.png" alt="desktop wireframe" width="250"/>
 
-    - **Test Passed** ✓
+    **Test Passed** ✓
 <br><br>
    - **`Responsiv design`**
      - Run the game on desktop
@@ -132,7 +133,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
      <img src="docs/responsive-design.png" alt="desktop wireframe" width="250"/>
      
-     - **Test Passed** ✓
+      **Test Passed** ✓
 <br><br>
   - **Supported screens and browsers**
      - For this game different screen sizes were tested and no errors were found. This specific sizes were validated
