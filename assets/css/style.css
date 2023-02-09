@@ -52,6 +52,10 @@ header>div>a {
     border-radius: 10px;
 }
 
+.buttonPressed {
+    border-color: #63b23dc7;
+}
+
 
 /*This styles the Game area of the page*/
 .game-area {
