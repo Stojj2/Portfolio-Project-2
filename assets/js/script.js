@@ -3,7 +3,7 @@ let gameWord = "";
 
 /**
  * This function will be caled when the DOM content is loaded
- * and run the setup steps for the game
+ * and run the setup steps for the game.
  */
 function setup() {
     document.getElementById("answer-box").disabled = true;
@@ -37,10 +37,11 @@ function buttonClicked(clickEvent) {
 
 /**
  * The start game function prepare the game area with game data.
+ * @param {name} name of the category that where chosen.
  */
 function startGame(category) {
-    document.getElementById("guesses-field").style.backgroundColor = "";
-    document.getElementById("hint-field").style.backgroundColor = "";
+    document.getElementById("guesses-field").classList.remove("redBackground");
+    document.getElementById("hint-field").classList.remove("greenBackground");
     document.getElementById("hint-header").textContent = "Hint:";
     document.getElementById("answer-box").disabled = false;
     document.getElementById("button-submit").disabled = false;
@@ -65,35 +66,37 @@ function startGame(category) {
 }
 
 /**
- * Checks which button where pressed 
- * and get a random object from cars or planets array
+ * Checks which button where pressed
+ * and get a random object from cars or planets array.
+ * @param {name} name of the category that where chosen.
  */
-function getWord(choosen) {
-    if (choosen === "planets") {
+function getWord(chosen) {
+    if (chosen === "planets") {
         return selectPlanetObject();
-    } else if (choosen === "cars") {
+    } else if (chosen === "cars") {
         return selectCarObject();
     }
 }
 
 /**
- * Selects a random object from PLANETS array
+ * Selects a random object from PLANETS array.
  */
 function selectPlanetObject() {
-    return PLANETS[getRandomIndex()];
+    return PLANETS[getRandomIndex(PLANETS.length)];
 }
 
 /**
- * Selects a random object from CARS array 
+ * Selects a random object from CARS array.
  */
 function selectCarObject() {
-    return CARS[getRandomIndex()];
+    return CARS[getRandomIndex(CARS.length)];
 }
 
 /**
- * Check if the answer typed in is matching the right answer
+ * Check if the answer typed in is matching the right answer.
  */
 function checkAnswer() {
+    emptyInput()
     let guessedWord = document.getElementById("answer-box").value.trim();
     if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord != "") {
         let hint = document.getElementById("hint-field");
@@ -102,13 +105,17 @@ function checkAnswer() {
         hint.textContent = "You guessed right!";
         document.getElementById("answer-box").disabled = true;
         document.getElementById("button-submit").disabled = true;
-        document.getElementById("hint-field").style.backgroundColor = "#63b23dc7";
+        document.getElementById("hint-field").classList.add("greenBackground");
         let wordToBeGuessed = document.getElementById("word-field");
         wordToBeGuessed.textContent = gameWord;
 
     } else {
-        document.getElementById("guesses-field").style.backgroundColor = "#c52f2f94";
-        decreaseGuessCount();
+        if (emptyInput() === false) {
+            document.getElementById("guesses-field").classList.add("redBackground");
+            decreaseGuessCount();
+        } else { 
+            alert("oops, the input field is empty, try typing in a guess!");
+        }
     }
 
     if (guessCount === 0) {
@@ -118,7 +125,7 @@ function checkAnswer() {
 }
 
 /**
- * Decrease the value of guesses left by 1
+ * Decrease the value of guesses left by 1.
  */
 function decreaseGuessCount() {
     guessCount--;
@@ -127,15 +134,16 @@ function decreaseGuessCount() {
 }
 
 /**
- * Generates a random number and returns the value
+ * Generates a random number and returns the value.
+ * @param {number} listLength is the length of the list in the category that was chosen.
  */
-function getRandomIndex() {
-    let index = Math.floor(Math.random() * 10);
+function getRandomIndex(listLength) {
+    let index = Math.floor(Math.random() * listLength);
     return index;
 }
 
 /**
- * Ending the game and notifies the player
+ * Ending the game and notifies the player.
  */
 function endGame() {
     document.getElementById("hint-header").textContent = "SORRY!";
@@ -151,10 +159,22 @@ function endGame() {
 }
 
 /**
- * Clears the input field from content
+ * Clears the input field from content.
  */
 function clearInput() {
     document.getElementById("answer-box").value = "";
+}
+
+/**
+ * Checks if the input field is empty.
+ * Will return true or false value.
+ */
+function emptyInput () {
+    if (document.getElementById("answer-box").value === "") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 document.addEventListener("DOMContentLoaded", setup);

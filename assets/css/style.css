@@ -182,6 +182,14 @@ footer {
     color: #000000cc;
 }
 
+/* CSS for javaScript code */
+.greenBackground {
+    background-color: #63b23dc7;
+}
+
+.redBackground {
+    background-color: #c52f2f94;
+}
 
 /* for big screen sizes from 900px wide and up */
 @media screen and (min-width: 900px) {
