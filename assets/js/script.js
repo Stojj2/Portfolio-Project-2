@@ -42,6 +42,7 @@ function buttonClicked(clickEvent) {
 function startGame(category) {
     document.getElementById("guesses-field").classList.remove("redBackground");
     document.getElementById("hint-field").classList.remove("greenBackground");
+    document.getElementById("hint-field").classList.remove("redBackground");
     document.getElementById("hint-header").textContent = "Hint:";
     document.getElementById("answer-box").disabled = false;
     document.getElementById("button-submit").disabled = false;
@@ -154,6 +155,7 @@ function endGame() {
     hint.textContent = "GAME OVER!";
     let wordToBeGuessed = document.getElementById("word-field");
     wordToBeGuessed.textContent = gameWord;
+    document.getElementById("hint-field").classList.add("redBackground");
 
 }
 
