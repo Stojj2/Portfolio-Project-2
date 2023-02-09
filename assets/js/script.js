@@ -96,7 +96,6 @@ function selectCarObject() {
  * Check if the answer typed in is matching the right answer.
  */
 function checkAnswer() {
-    emptyInput()
     let guessedWord = document.getElementById("answer-box").value.trim();
     if (guessedWord.toLowerCase() === gameWord.toLowerCase() && guessedWord != "") {
         let hint = document.getElementById("hint-field");
