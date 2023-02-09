@@ -7,11 +7,6 @@
 ## **Purpose** 
 Word Guesser is a word game that aims to make the user learn new things in different subject categories. This game is a fun and competitive way to learn new things.
 
-## **User Stories** 
-- As a visiting user, I would like to play something with words.
-- As a visiting user, I want to be encouraged to learn something new. 
-- As a visiting user, I would like to have instructions on how to use the game.
-
 ## **Features** 
 
 - ### Header area 
@@ -64,25 +59,32 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
 ### **Code validation**
 - W3C HTML Validator 
-  - [index.html]()
+  - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fstojj2.github.io%2FPortfolio-Project-2%2F)
   
 - W3C CSS Validator 
   - [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fstojj2.github.io%2FPortfolio-Project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 
 - Lighthouse desktop 
+  - <img src="docs/lighthouse-desktop.png" alt="desktop wireframe" width="500"/>
 
 - Lighthouse mobile 
+  - <img src="docs/lighthouse-mobile.png" alt="desktop wireframe" width="500"/>
 
-- jshint
+- jshint script.js
+  - The undefined variables are defined in the words.js file.
+  - <img src="docs/jshint-script.png" alt="desktop wireframe" width="300"/>
+
+- jshint words.js
+  - The unused variables are used in the script.js file.
+  - <img src="docs/jshint-words.png" alt="desktop wireframe" width="150"/>
 
 
 ### **Test cases** 
-<br><br>
 
-  - **`As a visiting user, I would like to play something with words.`** 
+  - **`Get a random word from the category pressed`** 
     - The game will have two different categories with words and will randomly chose a word for every game.
 
-  - **`As a visiting user, I want to be encouraged to learn something new.`**
+  - **`dont allow any input when the game is not started`**
     -  The hint area is intended to give the user help on the way to being able to guess the word. Hints are also a way to teach the user something about the word that helps to remember something about the word until the next time it appears. 
       ![Hint](docs/hint.png)
       <br><br>
@@ -101,13 +103,15 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
     <br><br>
 
 ### Fixed bugs 
- - One bug where found and fixed.
+ - 2 bugs where found and fixed.
     - When guesses left is at 0 the game is supposed to end, however the bug did allowed the user to make 1 more guess.
-    This was fixed with rearranging a if statement. The new if statement will check guesses left after it has decresed the guessing count.
- 
-### Unfixed bugs
- - If a user is doing a blank space in the input field when guessing a word the code logic will not be able to handle that today and will se it as the wrong answer eaven if the word guessed is right.
+    This was fixed with rearranging a if statement. The new if statement will check guesses left after it has decresed the guessing count. The bug was found in a mentor session.
 
+    - In the index.html file there was an h3 heading in a label element, html validator gave an error and the error was fixed.
+
+      <img src="docs/html-checker.png" alt="desktop wireframe" width="500"/>
+
+ 
 
 ## Technology 
   - **Balsamiq**
