@@ -39,7 +39,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 <br><br>
 
 - ### Responsive Design 
-  - The game will be playable on different screens sizes, Phon, tablet and desktop. 
+  - The game will be playable on different screens sizes, Phone, tablet and desktop. 
 
 ## **Future Features** 
 - Adding more word categories to the game.
@@ -80,28 +80,70 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
 
 ### **Test cases** 
-
+<br><br>
   - **`Get a random word from the category pressed`** 
-    - The game will have two different categories with words and will randomly chose a word for every game.
+    - Press one category button
+    - The game area gets loaded with content
+    - Press one more time and the game area loads a different word
+    - **Test Passed** ✓
+<br><br>
+  - **`dont allow any input when the game is not started or input field is empty`**
+      - The input box and the submit button is greyed out before any game is started
+      - Start a game
+      - Try to submit with an empty input field
+      - Error message appears
 
-  - **`dont allow any input when the game is not started`**
-    -  The hint area is intended to give the user help on the way to being able to guess the word. Hints are also a way to teach the user something about the word that helps to remember something about the word until the next time it appears. 
-      ![Hint](docs/hint.png)
-      <br><br>
+      <img src="docs/empty-input.png" alt="desktop wireframe" width="300"/>
 
-  - **`As a visiting user, I would like to have instructions on how to use the game.`**
-    - On the bottom of the page instruction is provided in a 4 step how-to-play guide.
-    <br><br>
-   **Supported screens and browsers**
-  - For this web page different screen sizes were tested and no errors were found. This specific sizes were validated
-    - **Desktop** 1920×1080
-      - For this resolution the media query will style the website with new style
+      - **Test Passed** ✓
+<br><br>      
+  - **`Check the answer to the hidden word`**
+    - Start a game
+    - Guess the correct word and see if the game shows that the correct word has been guessed
+    - The game area changes and notifies a result
+
+    <img src="docs/right-guess.png" alt="desktop wireframe" width="250"/>
+
+    - Guess a wrong answer and se if the game shows that the wrong word has been guessed
+    - The game area changes and notifies a result with a decrease of number of guesses left 
+
+    <img src="docs/wrong-guess.png" alt="desktop wireframe" width="250"/>
+
+    - **Test Passed** ✓
+<br><br>
+  - **`Handling involuntary input such as spaces`**
+    - Typing in a correct answer with a blankspace after the word
+    - The game logic is trimming the word and remove blanks spaces
+
+    - **Test Passed** ✓
+<br><br>
+  - **`Ends the game when no guesses are left`**
+    - Run out of guesses and se if the game ends
+    - Game ends and changing the game area content
+
+    <img src="docs/end-game.png" alt="desktop wireframe" width="250"/>
+
+    - **Test Passed** ✓
+<br><br>
+   - **`Responsiv design`**
+     - Run the game on desktop
+     - Run the game on phone
+     - Run the game on tablet
+
+     <img src="docs/responsive-design.png" alt="desktop wireframe" width="250"/>
+     
+     - **Test Passed** ✓
+<br><br>
+  - **Supported screens and browsers**
+     - For this game different screen sizes were tested and no errors were found. This specific sizes were validated
+      - **Desktop** 1920×1080
+        - For this resolution the media query will style the website with new style
     - **Tablet** 768x1024
     - **Mobile** 360x640
   - Browsers 
     - Google Chrom
-    <br><br>
 
+<br><br>
 ### Fixed bugs 
  - 2 bugs where found and fixed.
     - When guesses left is at 0 the game is supposed to end, however the bug did allowed the user to make 1 more guess.
@@ -147,10 +189,9 @@ The live link can be found here - https://stojj2.github.io/Portfolio-Project-2/i
  - Font [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is from Google fonts
 
   ### Other
-  - Very Much inspiration came from Code Institutes [Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) project. The HTML code was in great help for implementing the sign-up form in this website
+  - Code Institutes [Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) project was very helpful when I developed button handling
 
   - Code Institute student [template](https://github.com/Code-Institute-Org/gitpod-full-template) for Gitpod was used for this project
 
-  - Mentor **Rohit Sharma** helped me alot in this project for pointing my focus in the right direction
-  - Slack forum for support. Cred to *peer-code-review* channel on slack for reviewing and feedback my project
+  - Mentor **Rohit Sharma** guided me in the right direction and helped me set milestones during the course of the project. Cred to *peer-code-review* channel on slack for reviewing and feedback my project
 
