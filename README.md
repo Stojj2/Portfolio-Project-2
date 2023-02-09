@@ -64,8 +64,10 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
 ### **Code validation**
 - W3C HTML Validator 
+  - [index.html]()
   
 - W3C CSS Validator 
+  - [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fstojj2.github.io%2FPortfolio-Project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 
 - Lighthouse desktop 
 
