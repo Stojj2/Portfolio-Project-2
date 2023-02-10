@@ -44,6 +44,8 @@ header>nav {
     flex-wrap: wrap;
     align-content: center;
 }
+
+
 /*This styles the category area of the page*/
 .category {
     display: flex;
