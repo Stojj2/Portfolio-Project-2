@@ -88,7 +88,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 
      **Test Passed** ✓
 <br><br>
-  - **`dont allow any input when the game is not started or input field is empty`**
+  - **`Don't allow any input when the game is not started or input field is empty`**
       - The input box and the submit button is greyed out before any game is started
       - Start a game
       - Try to submit with an empty input field
