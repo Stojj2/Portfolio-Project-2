@@ -1,6 +1,6 @@
 # **Word Guesser** 
 
-![Am I Responsive](docs/responsive-design.png)
+![Am I Responsive](docs/responsive-design-3-devices.png)
 
  **Visit [Word Guesser](https://stojj2.github.io/Portfolio-Project-2/)**
 
@@ -10,7 +10,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
 ## **Features** 
 
 - ### Header area 
-  ![Header area](docs/header.png)
+  ![Header area](docs/header-top.png)
   - Gives a clear title with the name of the game
   - Navigation button to instruction section
 
