@@ -26,7 +26,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
     - Word length in the form of underscores
     - Input field for guesses
     - Submit button for submitting the guess  
-  - The input box and send button will be grayed out when the game is not started or if the game is over.
+  - The input box and submit button will be grayed out when the game is not started or if the game is over.
   - As soon a category is chosen the game area will be loaded with new content.
 
 - ### Instruction area
