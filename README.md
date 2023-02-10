@@ -132,7 +132,7 @@ Word Guesser is a word game that aims to make the user learn new things in diffe
      - Run the game on phone
      - Run the game on tablet
 
-     <img src="docs/responsive-design.png" alt="desktop wireframe" width="250"/>
+     <img src="docs/responsive-design-3-devices.png" alt="desktop wireframe" width="250"/>
      
       **Test Passed** ✓
 <br><br>
